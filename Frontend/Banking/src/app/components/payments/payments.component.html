@@ -1,0 +1,18 @@
+<div class="container mt-5">
+  <h2 mat-dialog-title>Make a Payment</h2>
+  <mat-card>
+    <mat-card-content>
+      <form>
+        <mat-form-field appearance="fill" class="w-100 mb-3">
+          <mat-label>Email</mat-label>
+          <input matInput [(ngModel)]="userEmail" name="userEmail" required>
+        </mat-form-field>
+        <mat-form-field appearance="fill" class="w-100 mb-3">
+          <mat-label>Amount</mat-label>
+          <input matInput type="number" [(ngModel)]="amount" name="amount" required>
+        </mat-form-field>
+        <button mat-raised-button color="primary" (click)="onPayment()" [disabled]="!userEmail || !amount">Submit Payment</button>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>
